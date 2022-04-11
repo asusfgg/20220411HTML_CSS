@@ -1,0 +1,84 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-04-11 10:42:32
+ * @LastEditTime: 2022-04-11 14:11:01
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \20220411HTML_CSS\1.html
+-->
+<!--
+结构 html
+表现 css
+行为 JavaScript
+-->
+<!-- hypertext markup language 超文本标记语言 -->
+<!--  -->
+<!DOCTYPE html>
+
+<!-- html 根标签，有且只有一个 -->
+
+<html lang="en">
+
+<!-- 层级关系 -->
+<!-- html标签是mate标签的祖先，mate是html的后代 -->
+<!-- html是head的父标签，head是html的子标签 -->
+
+<head>
+    <!-- 词汇记忆： -->
+    <!--
+        index：索引
+        lang : 语言
+        viewport : 窗口大小
+        meta : 描述
+        charset : 编码
+        content : 内容
+        name : 名称
+        http-equiv : http响应头
+        content-type : 内容类型
+        compatible : 兼容性
+        initial-scale : 初始缩放
+        maximum-scale : 最大缩放
+        minimum-scale : 最小缩放
+     -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- head的子标签title -->
+    <title>Html第一节课</title>
+</head>
+
+<body>
+    <!-- 标记 -->
+    <!-- 
+        
+     -->
+    <h1>
+        <!-- h1 一级标题 -->
+        <div>回乡偶书</div>
+    </h1>
+    <h2>
+        <span>贺知章</span>
+    </h2>
+    <ul>
+        <p>
+            <li>少小离家老大回,</li>
+            <li>乡音未改鬓毛吹.</li>
+            <li>儿童相见不相识,</li>
+            <li>笑问客从何处来.</li>
+        </p>
+    </ul>
+    <ul>
+        <li>li标签是无序列表,带个点</li>
+    </ul>
+    <script>
+        alert("hello");
+        var line_list = document.querySelectorAll("li");
+        line_list[0].addEventListener("click", function() {
+            alert("你点击了第一个li标签");
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
