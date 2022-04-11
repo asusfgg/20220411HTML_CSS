@@ -1,0 +1,44 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-11 15:02:19
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-11 15:19:45
+ * @FilePath: \20220411HTML_CSS\html_base_02.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- ************** 词汇记忆 ************** -->
+<!--
+alt：高音调。 规定图像的替代文本
+br：换行
+src：资源路径
+-->
+
+<body>
+    <h1>第二个页面</h1>
+    <!-- 自结束标签 -->
+    <img src="./josu-martin-tdf-figure-final-00000.jpg" alt="自行车" width="384" height="216">
+    <br>
+    <input type="text" value="预设值" name="请输入">
+    <button>提交</button>
+    <script>
+        // 这里是js代码
+        var button = document.querySelector('button');
+        button.addEventListener('click', function() {
+            var input = document.querySelector('input');
+            alert(input.value);
+            alert('提交成功');
+        });
+    </script>
+</body>
+
+</html>
