@@ -1,0 +1,79 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-11 15:20:38
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-11 16:11:35
+ * @FilePath: \20220411HTML_CSS\html_base_03.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>第三个网页-标签的属性</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .hljs-ln-numbers {
+            text-align: center;
+            color: #ccc;
+            border-right: 1px solid #999;
+            vertical-align: top;
+            padding-right: 5px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        hljs.initHighlightingOnLoad(); // 初始化
+        hljs.initLineNumbersOnLoad();
+    </script>
+    <link rel="stylesheet" href="./styles/default.min.css">
+    <!--引入默认代码样式，可换其他的-->
+    <link rel="stylesheet" href="./styles/dark.min.css">
+    <!--引入代码深色背景-->
+    <script src="./highlight.pack.js"></script>
+    <!--引入代码高亮js-->
+    <script src="./src/highlightjs-line-numbers.min.js"></script>
+    <!--引入添加行号js-->
+    <h1>第三个网页-
+        <br>
+        <!-- 属性是一个名值对，就是x=y这样的 -->
+        <span style="color:red;">标签的属性</span>
+        <xmp>
+            <span style="color:red;">标签的属性</span>
+        </xmp>
+        <font color="pink" size="18">标签的属性</font>
+        <xmp>
+            <font color="pink" size="18">标签的属性</font>
+        </xmp>
+        <br>
+        <h2>另一种代码显示方法</h2>
+        <h3>
+            代码中所有
+            < ,>都要分别替换成'& lt'和'& gt'
+        </h3>
+        <pre><code>
+            var h2 = document.getElementsByTagName('h2')[0];
+        </code></pre>
+    </h1>
+
+</body>
+
+</html>
