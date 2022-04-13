@@ -1,8 +1,8 @@
 <!--
  * @Author: 千仞无锋
  * @Date: 2022-04-12 20:28:09
- * @LastEditors: 千仞无锋
- * @LastEditTime: 2022-04-12 20:41:55
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-13 14:23:32
  * @FilePath: \20220411HTML_CSS\html_base_07.html
 -->
 <!DOCTYPE html>
@@ -11,6 +11,7 @@
 <head>
     <!-- meta 标签 设置元数据 -->
     <meta charset="UTF-8">
+    <!-- equiv 设置协议的 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 这句话在设置页面尺寸 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +19,41 @@
     <meta name="keywords" content="Html5,前端,css">
     <!-- description 描述 -->
     <meta name="description" content="这是一个练习页面" <title>Document</title>
+    <!-- http-equiv="refresh" 页面重定向 ; content 后面的 3表示等待几秒，url= 后面跟一个地址-->
+    <!-- <meta id="001" http-equiv="refresh" content="10;url=https://www.baidu.com"> -->
+    <style>
+        span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin: 5px;
+            color: rgb(187, 255, 1);
+            background-color: rgba(92, 92, 92, 0.8);
+        }
+    </style>
 </head>
 
 <body>
-
+    <div>
+        倒计时为:
+        <br>
+        <span id="time">10</span>
+        <script>
+            var second = document.querySelector("span").innerHTML;
+            console.log(second);
+            var timer = setInterval(function() {
+                second--;
+                document.getElementById('time').innerHTML = second;
+                if (second <= 0) {
+                    clearInterval(timer);
+                    alert('倒计时结束,页面即将跳转');
+                    location.href = "https://www.baidu.com";
+                }
+            }, 1000);
+        </script>
+    </div>
 </body>
 
 </html>
