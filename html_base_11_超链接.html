@@ -2,7 +2,7 @@
  * @Author: fgg
  * @Date: 2022-04-14 09:20:59
  * @LastEditors: fgg
- * @LastEditTime: 2022-04-14 16:30:02
+ * @LastEditTime: 2022-04-14 16:56:33
  * @FilePath: \20220411HTML_CSS\html_base_11_超链接.html
  * @Description: 学习用文件，主要就是笔记和随笔
  * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
@@ -18,22 +18,35 @@
 </head>
 
 <body>
-    <a href="#F1">a标签,超链接用,属于行内标签</a>
-    <div name="F1">div name属性值来设置一个锚点,用来页内跳转</div>
+    <!-- 锚点 用id 来获取，name不太灵光 -->
+    <a href="#here">页内标签跳转,锚点功能</a>
+    <a href="#end">一键到底</a>
+
     <a href="./html_base_01_第一节课与词汇记忆.html">同文件目录跳转</a>
+    <!-- ../ 表示返回上一级目录 -->
+    <!-- 新标签打开链接 -->
+    <!-- target属性来操作 -->
+    <!-- target="_blank" 新标签打开链接 -->
+    <!-- target="_self" 当前标签打开链接 -->
+    <a href="http://www.baidu.com" target="_blank">新标签打开链接-百度</a>
 
-    <div name="hm">hm</div>
-    <a href="javascript:gohere('hm')" style="display: block;margin : 70px auto auto 50px; font-size: 22px;text-decoration: none; color : #1E90FF ;">
-        了解更多 >> </a>
+
+    <p name="F0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam porro debitis, eveniet et enim illum fuga nam eum aut, ad nesciunt explicabo. Amet neque repellendus voluptas iste, ipsa minus officia. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas adipisci suscipit, totam sapiente saepe aliquam voluptates, similique quibusdam ipsum a provident nulla perferendis iusto architecto doloremque earum, dolor beatae officiis! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Similique animi in adipisci sed, odio nemo quos laborum inventore quae impedit facilis recusandae voluptatem laudantium eius exercitationem doloremque blanditiis fugiat ipsum? Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Quasi labore possimus et maxime eius pariatur perspiciatis! Neque amet quis dignissimos! In aliquid ut placeat laborum autem atque praesentium, illo unde? elit. Id nesciunt ea doloremque nihil facilis tempore
+        qui repellat, accusamus, at fugiat illo, adipisci reiciendis. Minima itaque vel iure consequatur qui delectus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque doloremque voluptate dicta, optio autem officiis minima suscipit
+        eos architecto obcaecati distinctio error minus officia accusantium pariatur voluptatum deleniti dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nemo earum dicta, suscipit consequuntur reiciendis, laboriosam fuga eveniet
+        reprehenderit fugiat, corporis error eos modi rem dolore eaque molestiae nisi inventore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus aperiam sapiente modi ab consectetur, aliquam voluptatem aliquid at delectus iste iure
+        exercitationem nostrum cum unde consequuntur earum quibusdam vitae similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci sit impedit ea fugiat
+        iste tempore incidunt eaque praesentium suscipit! Aperiam odio minus minima, saepe facere modi cum soluta numquam.
+    </p>
 
 
-    <script>
-        function gohere(where) {
-            $("html,body").animate({
-                scrollTop: $("#" + where + "").offset().top
-            }, 1000);
-        };
-    </script>
+    <p id="here">div name属性值来设置一个锚点,用来页内跳转</p>
+    <!-- 直接一个# 就完事 -->
+    <a href="#" id="end">回到顶部</a>
 </body>
 
 </html>
