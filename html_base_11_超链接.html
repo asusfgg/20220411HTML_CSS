@@ -1,0 +1,39 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-14 09:20:59
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-14 16:30:02
+ * @FilePath: \20220411HTML_CSS\html_base_11_超链接.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接</title>
+</head>
+
+<body>
+    <a href="#F1">a标签,超链接用,属于行内标签</a>
+    <div name="F1">div name属性值来设置一个锚点,用来页内跳转</div>
+    <a href="./html_base_01_第一节课与词汇记忆.html">同文件目录跳转</a>
+
+    <div name="hm">hm</div>
+    <a href="javascript:gohere('hm')" style="display: block;margin : 70px auto auto 50px; font-size: 22px;text-decoration: none; color : #1E90FF ;">
+        了解更多 >> </a>
+
+
+    <script>
+        function gohere(where) {
+            $("html,body").animate({
+                scrollTop: $("#" + where + "").offset().top
+            }, 1000);
+        };
+    </script>
+</body>
+
+</html>

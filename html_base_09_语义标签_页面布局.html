@@ -1,0 +1,103 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-14 09:20:38
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-14 14:13:18
+ * @FilePath: \20220411HTML_CSS\html_base_09_语义标签_页面布局.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 块元素 宏观布局 -->
+    <!-- 行内元素 细节处理 -->
+    <!-- 块元素中放置行内元素
+        p元素中 啥都不能放
+    -->
+    <!-- 浏览器会对不规范的地方修正 -->
+    <!-- content sectioning 内容分节 -->
+    <main>
+        <!--  -->
+    </main>
+    <nav>
+        <!-- 表示网页中的导航 navigation 航海，导航 -->
+        导航,nav标签,
+        <br> 举个栗子:
+        <br>
+        <ol>
+            <li>
+                <a href="">首页</a>
+            </li>
+            <li>
+                <a href="">关于我们</a>
+            </li>
+            <li>
+                <a href="">联系我们</a>
+            </li>
+        </ol>
+    </nav>
+    <article>
+        <!-- article 文章，冠词，物件 -->
+        <!-- 表示一个独立的文章 -->
+        article 独立文章
+        <br>
+        <article>
+            <h1>这是第一个标题</h1>
+            <article>
+                <h2>这是第一个小标题</h2>
+                <p>
+                    这是一段文字
+                </p>
+            </article>
+            <article>
+                <h2>这是第二个小标题</h2>
+                <p>
+                    这是一段文字
+                </p>
+            </article>
+            <article>
+                <h2>这是第三个小标题</h2>
+                <p>
+                    这是一段文字
+                </p>
+            </article>
+        </article>
+    </article>
+    <aside>
+        <!-- aside 旁白 -->
+        <!-- 表示和主题相关的其他内容，但不属于主题 -->
+        对主题的解释,和相关的内容 = aside , 侧边栏
+        <br> 举个栗子:
+        <br>
+        <p>这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,这是前段落,</p>
+        <aside>
+            <p>
+                解释一下,这是一个侧边栏,结构上出于两个p标签之间,显示效果没啥区别,嗨嗨嗨,得上css
+            </p>
+        </aside>
+        <p>这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,这是后段落,</p>
+    </aside>
+    <div>
+        <!-- div没有语义，就是一个区块，主要的布局元素 -->
+        division : 区块,div标签,
+        <span>span也是没有语义,用来选中文字,内联元素,常用</span>
+    </div>
+
+    <section>
+        <!-- 表示一个独立的区块 -->
+        分区,分块,section
+    </section>
+    <script>
+    </script>
+</body>
+
+</html>
