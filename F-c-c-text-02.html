@@ -1,0 +1,144 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-29 09:06:36
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-29 14:22:02
+ * @FilePath: \20220411HTML_CSS\F-c-c-text-02.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习:制作一个调查表格</title>
+</head>
+<style>
+    main {
+        text-align: center;
+        margin: 30px 50px;
+        padding: 15px;
+        border-radius: 15px;
+        background: #eee;
+    }
+    
+    body {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+    }
+    
+    #title {
+        text-align: center;
+    }
+    
+    .input-textarea {
+        min-height: 100px;
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        display: block;
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+    
+    #submit {
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 0.75rem;
+        background: var(--color-green);
+        color: inherit;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <main>
+        <!-- 标题 -->
+        <h1 id="title">一个调查表</h1>
+        <!-- 描述 -->
+        <div id="description">
+            <p>
+                请您填写以下信息，以便我们了解您的需求。
+            </p>
+        </div>
+        <!-- 表单组 -->
+        <from id="survey-form" action="">
+            <!-- 姓名 -->
+            <div class="from-group">
+                <div id="name-label">名字</div>
+                <input type="text" id="name" placeholder="姓名" required>
+            </div>
+            <!-- 邮箱 -->
+            <div class="from-group">
+                <div id="email-label">电子邮件</div>
+                <input type="email" id="emal" placeholder="邮件" required>
+            </div>
+            <!-- 年龄 -->
+            <div class="from-group">
+                <div id="number-label">年龄</div>
+                <input type="number" id="number" placeholder="年龄" required min="10" max="90" pattern="^\d{2}$" oninvalid="setCustomValidity(瞪大眼,看清楚再输入)">
+                <!-- <p>
+                    <input type="submit" value="提交">
+                </p> -->
+            </div>
+            <div class="from-group">
+                <p id="dropdown-label">选择一个你看的顺眼的</p>
+                <select id="dropdown">
+                    <option value="1">选项1</option>
+                    <option value="2">选项2</option>
+                    <option value="3">选项3</option>
+                    <option value="4">选项4</option>
+                </select>
+            </div>
+            <div class="from-group">
+                <p>单选列表</p>
+                <label>
+                    <input type="radio" name="radio" value="1">
+                    选项1
+                </label>
+                <label>
+                    <input type="radio" name="radio" value="2">
+                    选项2
+                </label>
+                <label>
+                    <input type="radio" name="radio" value="3">
+                    选项3
+                </label>
+            </div>
+            <div class="from-group">
+                <p>复选列表</p>
+                <label>
+                    <input type="checkbox" name="checkbox" value="1">
+                    选项1
+                </label>
+                <label>
+                    <input type="checkbox" name="checkbox" value="2">
+                    选项2
+                </label>
+                <label>
+                    <input type="checkbox" name="checkbox" value="3">
+                    选项3
+                </label>
+            </div>
+            <div class="from-group">
+                <p>还想说点啥?</p>
+                <textarea id="comments" class="input-textarea" name="textarea" placeholder="想说啥就给这写...">
+                </textarea>
+            </div>
+            <div class="from-group">
+                <button type="submit" id="submit">提交</button>
+            </div>
+        </from>
+    </main>
+</body>
+
+</html>
