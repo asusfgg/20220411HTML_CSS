@@ -1,0 +1,103 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-04-29 14:15:06
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-04-29 14:15:48
+ * @FilePath: \20220411HTML_CSS\代码片段.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*---------------------------------------------------------*/
+    
+    .a {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .b {
+        width: 200px;
+        height: 50px;
+        background-color: limegreen;
+        line-height: 50px;
+        color: #ffffff;
+    }
+    
+    .c {
+        width: 200px;
+        height: 300px;
+        background-color: gainsboro;
+        display: none;
+    }
+    
+    ul {
+        list-style: none;
+        margin-left: -40px;
+    }
+    
+    ul li {
+        line-height: 50px;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    /*:hover 鼠标悬浮选择器 鼠标在目标上时的css样式变化 ， 属于 伪类型*/
+    /* 格式： 被选择者：hover{属性：值；}*/
+    /*同类的还有 ：active 焦点点击获得 ； ：link 焦点未点击获得 ； ：visited 已点过的链接*/
+    /*:hover 必须位于 :link 和 :visited 之后*/
+    
+    .a:hover {
+        /*cursor规则是设定网页浏览时用户鼠标指针的样式*/
+        /*cursor：pointer设定鼠标的形状为一只伸出食指的手*/
+        /*常用的有default 箭头，crosshair 十字，progress 箭头和沙漏等等*/
+        cursor: pointer;
+    }
+    /*note：同级元素 格式： a:hover + .c*/
+    /*使用a控制a的子元素c*/
+    
+    .a:hover .c {
+        /*将元素显示为块级元素*/
+        /*比较常用于像是<a>和<span>等不是块级元素的元素中*/
+        display: block;
+    }
+    /*使用a控制a的子元素b*/
+    
+    .a:hover .b {
+        background-color: green;
+    }
+    
+    li:hover {
+        background-color: gray;
+        color: #FFFFFF;
+    }
+    /*---------------------------------------------------------*/
+</style>
+
+<body>
+    <div class="from-group">
+        <p id="nb"><strong>这是另一种蛮好看的下拉表单</strong></p>
+        <div class="a">
+            <div class="b">
+                自动下拉列表
+            </div>
+            <div class="c">
+                <ul>
+                    <li>选项1</li>
+                    <li>选项2</li>
+                    <li>选项3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
