@@ -1,0 +1,61 @@
+<!--
+ * @Author: 千仞无锋
+ * @Date: 2022-05-17 22:00:51
+ * @LastEditors: 千仞无锋
+ * @LastEditTime: 2022-05-17 23:44:50
+ * @FilePath: \20220411HTML_CSS\音视频播放.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多媒体播放</title>
+</head>
+<style>
+    audio {}
+</style>
+
+<body>
+    <!-- 音视频文件引入时， 默认情况下不允许用户控制播放 但是来个controls 属性就回有控制板出现-->
+    <!-- 音频 -->
+    <div>
+        <h3>整个小曲儿</h3>
+        <!-- loop 循环属性 -->
+        <!-- <audio src="./source/DJ小鱼儿 - 她会魔法吧.mp3" controls loop></audio> -->
+        <audio controls>
+            <!-- source不能用了 就出现下面这行字 -->
+            您的浏览器太拉了,麻烦升级一下吧
+            <script>
+                function note() {
+                    alert("我要放歌了,你调整下音量啊");
+                }
+                note();
+            </script>
+            <!-- 这俩source 表示 第一个能用 第一个上，第一个拉了，第二个替补 以此类推-->
+            <source src="./source/DJ小鱼儿 - 她会魔法吧.mp3" type="audio/mpeg" />
+            <source src="./source/二龙湖浩哥 - 敬昨天.mp3" type="audio/mpeg" />
+            <embed src="./source/二龙湖浩哥 - 敬昨天.mp3" width="0" height="0" type="audio/mp3" />
+        </audio>
+        <!-- 针对ie8 -->
+        <!-- 缺德标签，特么会自动播放 -->
+        <!-- width 和 height 为0 是吧播放器隐藏了 -->
+        <!-- type 指定类型，先大类型，再小类型 -->
+        <!-- <embed src="./source/二龙湖浩哥 - 敬昨天.mp3" width="0" height="0" type="audio/mp3" /> -->
+    </div>
+    <>
+        <!-- 引入视频 -->
+        <video controls>
+
+            <!-- 错误写法，引不进来 -->
+            <source src="./source/" loop
+                width="50" height="30">
+        </video>
+        <br>
+        <iframe src="//player.bilibili.com/player.html?aid=975849547&bvid=BV1A44y1t77E&cid=419133862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+</body>
+
+</html>

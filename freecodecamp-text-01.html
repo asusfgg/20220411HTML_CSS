@@ -1,8 +1,8 @@
 <!--
  * @Author: fgg
  * @Date: 2022-04-28 13:58:11
- * @LastEditors: fgg
- * @LastEditTime: 2022-04-28 16:22:10
+ * @LastEditors: 千仞无锋
+ * @LastEditTime: 2022-04-28 21:42:29
  * @FilePath: \20220411HTML_CSS\freecodecamp-text-01.html
  * @Description: 学习用文件，主要就是笔记和随笔
  * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
@@ -11,9 +11,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A tribute page</title>
 </head>
 
@@ -41,10 +41,26 @@
     #title {}
     
     #main {
-        margin: 30px 8px;
-        padding: 15px;
-        border-radius: 5px;
-        background: #eee;
+        /* 页边距  上下30px 左右8px*/
+        /*margin: 30px 8px;*/
+        margin-top: 30px;
+        margin-right: 8px;
+        margin-bottom: 30px;
+        margin-left: 8px;
+        /*填充 上下左右15px*/
+        /*padding: 15px;*/
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        /*边框半径-圆角*/
+        /*border-radius: 5px;*/
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        /*背景*/
+        background: rgb(223, 223, 223);
     }
     
     body {
@@ -62,22 +78,25 @@
     #tribute-info {}
     
     #img-div {
-        background: #fcd600fd;
+        background: #fdba00fd;
         padding-top: 10px;
         padding-right: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
     }
     
-    img {
+    #image {
         max-width: 100%;
+        display: block;
+        height: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
     }
     
     #img-caption {
         margin: 15px 0 5px 0;
-    }
-    
-    figure {
         display: block;
         margin-block-start: 1em;
         margin-block-end: 1em;
@@ -99,19 +118,14 @@
 
 <body>
     <main id="main" class="">
-
-        <h1 id="title">
-            Tribute to Academician Yuan Longping
-        </h1>
-        <p>
-            The founder of China's hybrid rice business.
-        </p>
+        <h1 id="title">Tribute to Academician Yuan Longping</h1>
+        <p>The founder of China's hybrid rice business.</p>
 
         <div if="img-div">
-            <img id="image" src="https://img0.baidu.com/it/u=1259162914,3283995193&fm=253&fmt=auto&app=138&f=JPEG?w=744&h=500" alt="Tribute to Academician Yuan Longping">
-            <figure id="img-caption">
+            <img id="image" src="https://img0.baidu.com/it/u=1259162914,3283995193&fm=253&fmt=auto&app=138&f=JPEG?w=744&h=500" alt="Tribute to Academician Yuan Longping" />
+            <div id="img-caption">
                 Academician Yuan Longping works in the field
-            </figure>
+            </div>
         </div>
         <section id="tribute-info">
             <h3 id="headline">
@@ -134,9 +148,7 @@
                 <li>
                     <strong> July 5, 1964</strong> Yuan Longping found a "natural male sterile plant" in the experimental paddy field. After artificial pollination, hundreds of seeds of the first generation male sterile plant were produced.
                 </li>
-                <li>
-                    <strong>1976</strong> hybrid rice was successfully promoted.
-                </li>
+                <li><strong>1976</strong> hybrid rice was successfully promoted.</li>
                 <li>
                     <strong> October 1980</strong> Yuan Longping, the first breeder in my country to study hybrid rice and a researcher at Hunan Academy of Agricultural Sciences, after more than 10 years of hard research and experiments, with the cooperation
                     of relevant scientific research units, overcame the barrier of seed production and enabled the research on hybrid rice. The overall success has opened up a new way for increasing rice production.
@@ -154,20 +166,23 @@
                     people. His outstanding achievements not only belong to China, but also affect the world."
                 </p>
                 <cite>
-                    --- <a id="reference-link"
-                        href="https://baijiahao.baidu.com/s?id=1700604596149798671&wfr=spider&for=pc"
-                        target="_blank">Xinhua Net </a>
-                    Review.
-                </cite>
+            ---
+            <a
+              id="reference-link"
+              href="https://baijiahao.baidu.com/s?id=1700604596149798671&wfr=spider&for=pc"
+              target="_blank"
+              >Xinhua Net
+            </a>
+            Review.
+          </cite>
             </blockquote>
 
             <h3>
-                If you have time, you should read more about this great scientist on his <a id="tribute-link" href="https://baike.baidu.com/item/%E8%A2%81%E9%9A%86%E5%B9%B3/43836?fr=aladdin" target="_blank">Baidu Encyclopedia
-                    entry</a>.
-            </h3>
-        </section>
+                If you have time, you should read more about this great scientist on his
+                <a id="tribute-link" href="https://baike.baidu.com/item/%E8%A2%81%E9%9A%86%E5%B9%B3/43836?fr=aladdin" target="_blank">Baidu Encyclopedia entry</a
+          >.
+        </h3>
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>
