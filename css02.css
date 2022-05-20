@@ -55,4 +55,14 @@ div>h3 {
 }
 
 
-/*  */
+/* 后代选择器 */
+
+div span {
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2.blue>span {
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
