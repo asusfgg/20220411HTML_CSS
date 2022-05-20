@@ -1,0 +1,20 @@
+#the1st {
+    color: aquamarine;
+}
+
+.tom {
+    color: tomato;
+}
+
+.org {
+    color: orange;
+}
+
+p:hover {
+    color: blueviolet;
+}
+
+h4 {
+    color: yellowgreen;
+    font-size: 30px;
+}

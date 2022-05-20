@@ -1,0 +1,60 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-05-20 09:51:36
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-05-20 10:06:34
+ * @FilePath: \20220411HTML_CSS\css01.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <!-- 引入外部css文件 -->
+    <!-- stylesheet 样式表 -->
+    <!-- 利用浏览器缓存机制，加快访问速度 -->
+    <link rel="stylesheet" type="text/css" href="css01.css">
+</head>
+<!-- 结构 html 表现 css 行为 js -->
+<!-- css 层叠样式 联想PS图层原理-->
+<!-- 选择器 -->
+<!--
+    .class ;
+    #id ;
+    div,p	选择所有<div>元素和<p>元素;
+    div p	选择<div>元素内的所有<p>元素;
+    div>p	选择所有父级是 <div> 元素的 <p> 元素;
+    div+p	选择所有紧跟在 <div> 元素之后的第一个 <p> 元素;
+    [target]	选择所有带有target属性元素;
+    a:link	选择所有未访问链接;
+    a:hover	选择鼠标在链接上面时;
+    input:focus	选择具有焦点的输入元素;
+    p:first-child	指定只有当<p>元素是其父级的第一个子级的样式。
+-->
+<style>
+    /* 注释方法 */
+</style>
+
+<body>
+    <!-- 内联样式：标签内部 style属性设置css样式,名值对，冒号分隔，分号结尾 -->
+    <!-- 内联样式 覆盖总体样式 -->
+    <h4>
+        少小离家老大回,<br> 乡音未改鬓毛吹.
+        <br>
+    </h4>
+    <div class="">
+        今天天气还行，<br>
+    </div>
+
+    <p id="the1st">为天地立心</p>
+    <p class="tom">为生民立命</p>
+    <p class="tom">为往圣继绝学</p>
+    <p class="org">为万世开太平</p>
+</body>
+
+</html>
