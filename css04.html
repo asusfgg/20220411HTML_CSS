@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css伪类选择器</title>
+    <link type="text/css" rel="stylesheet" href="./css04.css">
+</head>
+<style>
+    /*第一个li设置为蓝色*/
+    
+    ul>li.first {
+        /*所有子元素*/
+        color: red;
+    }
+    /*当结构不固定时（例如顶部又多了几个li），如何灵活选择相应位置的li*/
+    /*自动选中所谓第一个元素*/
+    /*所以：运用 伪类选择器*/
+    /*描述特征词 处在第一位置，鼠标焦点，鼠标点击，鼠标移入等等*/
+    /*好处：动态选择，方便*/
+    
+    ul>li:first-child {
+        color: rgb(255, 196, 0);
+    }
+    
+    ul>li:last-child {
+        color: aquamarine;
+    }
+    /*nth拆分理解 n+th表示第n个 ， 直接括号写n 表示全选中 ，2n偶数位，2n+1奇数位，odd奇书，even偶数*/
+    
+    ul>li:nth-child(3) {
+        color: rgba(140, 17, 255, 0.692);
+    }
+    /*同类型内，倒数第二个*/
+    
+    ul>li:nth-last-of-type(2) {
+        color: rgb(255, 0, 0);
+    }
+    /*否定伪类：not*/
+    /*符合条件的元素从选择器中去除*/
+    /*除去第一个仔，其他的都整成黄色*/
+    
+    ul>li:not(:first-child) {
+        color: rgb(229, 255, 0);
+    }
+    /*未访问链接设置颜色*/
+    /*link表示未访问链接，严格表示正常链接，管你访问过没访问过 都叫正常连接*/
+    
+    a:link {
+        font-size: 20px;
+        color: rgb(223, 189, 255);
+    }
+    /*已访问链接设置颜色 visited*/
+    
+    a:visited {
+        /*这里设置字体没啥用-隐私问题突出*/
+        font-size: 30px;
+        color: rgb(0, 225, 255);
+    }
+    /*鼠标聚焦，移入等*/
+    /*hover*/
+    /*鼠标移入，设置颜色*/
+    
+    a:hover {
+        font-size: 30px;
+        color: rgb(255, 196, 0);
+    }
+    /*鼠标点击，设置颜色*/
+    /*active*/
+    
+    a:active {
+        color: aquamarine;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>第零个</li>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+    <a href="https://www.baidu.com">baidu超链接</a>
+    <br>
+    <a href="https://cn.bing.com/">bing超链接</a>
+</body>
+
+</html>

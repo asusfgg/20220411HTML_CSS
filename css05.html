@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器(选择器)..</title>
+</head>
+<style>
+    p {
+        font-size: 20px;
+    }
+    /*首字母下沉效果*/
+    /*单独选择第一个字母*/
+    
+    p::first-letter {
+        color: white;
+        font-size: 40px;
+    }
+    
+    p::first-line {
+        background-color: rgb(21, 211, 147);
+        font-size: 30px;
+    }
+    /*鼠标拖拽选择动态背景色效果*/
+    
+    p::selection {
+        background-color: rgb(115, 255, 0);
+        color: white;
+    }
+    /*元素起始终止位置*/
+    /*：：before； ：：after*/
+    
+    div::before {
+        /*这玩意没法选中*/
+        /*没空间不生效，有空间才生效*/
+        content: "这玩意没法选中";
+        /*必须结合centent属性使用*/
+        width: 500px;
+        height: 10px;
+        background-color: rgb(255, 189, 189);
+    }
+    
+    div::after {
+        content: "这玩意没法选中";
+        width: 500px;
+        height: 10px;
+        background-color: rgb(252, 196, 196);
+    }
+</style>
+
+<body>
+    <h1>伪元素 就是一个假想的元素,不一定存在.</h1>
+    <p>lalalal ~ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium reiciendis facilis expedita laudantium laboriosam nisi earum distinctio esse voluptas, numquam eligendi mollitia commodi rem molestiae explicabo! Dolores quibusdam temporibus
+        amet?
+    </p>
+    <div> hello how are you</div>
+    <q>这里这里,这自动加的双引号</q>
+</body>
+
+</html>
