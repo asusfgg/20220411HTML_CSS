@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 并不是所有的样式都会被继承，比如：背景相关的，布局相关等 具体查文档 -->
+<style>
+    p {
+        /*连带行内元素，后代元素都一起变了，这就是：*/
+        /*样式继承*/
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+        background-color: rgb(0, 255, 0);
+    }
+    
+    div {
+        color: rgb(0, 192, 42);
+    }
+    
+    body>div::before {
+        content: "这是一个测试";
+        background-color: rgb(255, 168, 168);
+    }
+    
+    p::first-letter {
+        color: rgb(0, 119, 255);
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <p>这里是p元素,p元素中不能有块元素<br><span>这里是p元素中的span</span></p>
+    <div>我是
+        <div>我是div中的div <span>我是div中的div中的span <em>我是套娃中的em元素</em></span></div>
+    </div>
+</body>
+
+</html>
