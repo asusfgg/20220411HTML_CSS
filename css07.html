@@ -13,24 +13,53 @@
     div {
         color: brown;
     }
+    /*优先级计算后相同，则按照顺序，优先使用最后一个*/
     
     .red {
         color: red;
     }
     
+    .d1 {
+        color: rgb(255, 139, 220) !important;
+    }
+    /* ！important才是老大啊*/
+    
     #box1 {
         color: blue;
+    }
+    /*交集选择器权重高于单独id选择器，为啥呢：计算权重数值，这家伙俩选择器，俩权重值相加，直接上天了*/
+    
+    div#box1 {
+        color: green;
+    }
+    /*分组选择器，它是单独计算，哈哈哈*/
+    
+    div,
+    p,
+    span {
+        color: yellow;
     }
     /*
     不同选择器 选中相同元素，并且设置相同属性，但是不同值：
     样式冲突时：
     由选择器权重（优先级）决定：
     id > class > element
+    ->
+    内联样式        1,0,0,0
+    id选择器        1,0,0
+    类与伪类选择器  1,0
+    元素选择器      1
+    通配选择器*     0
+    继承样式没有优先级
+
+    选择器累加.不会超过一个量级,类选择器权重值再高,也干不过id
     */
 </style>
 
 <body>
-    <div id="box1" class="red">this is a div-box1</div>
+    <div id="box1" class="red  d1" /*style="color:blueviolet" */>this is a div-box1<br>
+    <p>this is p element in div<br><span>this is a span in div and p</span></p>
+    </div>
 </body>
 
 </html>
