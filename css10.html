@@ -1,0 +1,62 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-05-25 15:11:47
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-05-25 16:01:21
+ * @FilePath: \20220411HTML_CSS\css10.html
+ * @Description: 学习用文件，主要就是笔记和随笔!
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型</title>
+</head>
+<style>
+    .box1 {
+        /*这俩宽高是设置内容区的宽高，不是整个盒子大小，一定注意*/
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 145, 0);
+        /*absolute绝对的*/
+        /*因为使用绝对定位*/
+        position: absolute;
+        /*手动定位用*/
+        /*这俩参数影响margin，就是说margin是在（top,left）坐标上开始计算的*/
+        top: 50px;
+        left: 50px;
+        /*边框(直接会扩大盒子尺寸)*/
+        /*上右下左 顺时针方向*/
+        border-width: 10px 9px 8px 7px;
+        border-color: rgb(0, 255, 234) rgb(5, 255, 5) rgb(97, 97, 255) red;
+        /*style:dotted 和 solid*/
+        border-style: dotted solid dashed double;
+        /*外边距：俩盒子在一起的距离关系设定*/
+        margin: 50px 40px 30px 20px;
+        /*内容区和边距border的距离(也会撑大盒子)*/
+        padding: 8px 7px 6px 5px;
+    }
+</style>
+<!-- css将页面所有元素都设置为了矩形元素，都是一个个的小四边形 -->
+<!-- 每个盒子由：
+    内容区content：装子元素 文字啥的
+    边框border：边框的颜色，边框的宽度
+    填充padding：填充的颜色，填充的宽度
+    外边距margin：
+    位置position：
+    
+
+-->
+
+<body>
+    <div class="box1">盒子1</div>
+    <div class="box2">盒子2</div>
+    <div class="box3">盒子3</div>
+    <div class="box4">盒子4</div>
+</body>
+
+</html>

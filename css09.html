@@ -1,3 +1,12 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-05-24 16:23:50
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-05-25 15:08:42
+ * @FilePath: \20220411HTML_CSS\css09.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +16,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>layout-01文档流</title>
 </head>
+<style>
+    .box0 {
+        background-color: #f00;
+        /*未指定宽度，默认宽度与屏幕一样宽*/
+        width: 100px;
+    }
+    
+    .box1 {
+        background-color: #0f0;
+        width: 100px;
+    }
+    
+    .e0 {
+        background-color: #ff0;
+    }
+    
+    .e1 {
+        background-color: #0ff;
+    }
+</style>
 
 <body>
-
+    <!-- 
+    最底层：文档流（网页基础），创建元素都是在文档流中排列。
+        元素：主要有两个状态： 在文档流中，不在文档流中（脱离文档流）。
+    element在文档流中的特点：
+    块级元素：独占一行，不能被换行，不能被排版，默认宽度是父元素的宽度。默认高度是被子元素撑开 。
+    行内元素：只占自身大小,不会独占一行,可以被自动换行，可以被排版。自左向右水平排列.
+ -->
+    <div class="box0">我是div0</div>
+    <div class="box1">我是div1</div>
+    <span class="e0">我是span0</span>
+    <span class="e1">我是span1</span>
 </body>
 
 </html>
