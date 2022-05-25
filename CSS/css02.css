@@ -66,3 +66,24 @@ h2.blue>span {
     color: tomato;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+/* 兄弟选择器 */
+
+
+/* +号表示选择的是一个元素，不是俩， 是 加号前元素的下一个紧挨的元素！！！！！ */
+
+div h3+p {
+    color: rgb(5, 248, 17);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 30px;
+}
+
+
+/* 波浪号~：选择波浪号前元素的下边所有的兄弟 */
+
+div h3~h3 {
+    color: rgb(2, 187, 187);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 30px;
+}
