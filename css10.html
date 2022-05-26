@@ -2,7 +2,7 @@
  * @Author: fgg
  * @Date: 2022-05-25 15:11:47
  * @LastEditors: fgg
- * @LastEditTime: 2022-05-25 16:01:21
+ * @LastEditTime: 2022-05-25 16:30:03
  * @FilePath: \20220411HTML_CSS\css10.html
  * @Description: 学习用文件，主要就是笔记和随笔!
  * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
@@ -40,6 +40,12 @@
         /*内容区和边距border的距离(也会撑大盒子)*/
         padding: 8px 7px 6px 5px;
     }
+    
+    .inner {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(154, 255, 86);
+    }
 </style>
 <!-- css将页面所有元素都设置为了矩形元素，都是一个个的小四边形 -->
 <!-- 每个盒子由：
@@ -53,7 +59,9 @@
 -->
 
 <body>
-    <div class="box1">盒子1</div>
+    <div class="box1">盒子1
+        <div class="inner">子元素</div>
+    </div>
     <div class="box2">盒子2</div>
     <div class="box3">盒子3</div>
     <div class="box4">盒子4</div>
