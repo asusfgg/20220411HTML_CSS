@@ -1,0 +1,115 @@
+<!--
+ * @Author: fgg
+ * @Date: 2022-05-30 15:06:55
+ * @LastEditors: fgg
+ * @LastEditTime: 2022-05-31 14:34:15
+ * @FilePath: \20220411HTML_CSS\练习\01垂直排列练习\free-code-camp\03.html
+ * @Description: 学习用文件，主要就是笔记和随笔
+ * Copyright (c) 2022 by fgg/Mechanical Design Studio, All Rights Reserved. 
+-->
+<!--
+需求：
+
+你的产品登录页应该有一个 id="header" 的 header 元素
+你可以在 header 元素中看到一个 id="header-img" 的图像（比如一个 logo）
+在 #header 元素中，你可以看到一个 id="nav-bar" 的 nav 元素
+在 nav 元素中，你可以看到至少三个可点击的元素，每个元素的 class 为 nav-link
+当你点击 nav 内的 .nav-link 按钮时，应滚动到登录页相应的部分
+你可以观看一个 id="video" 的嵌入的产品视频
+你的登录页有一个 id="form" 的 form 元素
+在表单中，应存在一个 id="email" 的 input 输入框供用户填写邮箱地址
+在 #email 输入框内应有描述该区域用途的占位符文本
+#email 输入框应该用 HTML5 验证来确认输入的内容是否为邮箱地址
+在表单中，有一个 id="submit" 的 input 提交按钮
+当你点击 #submit 元素时，邮箱会被提交到一个静态页面 (使用这个模拟 URL：https://www.freecodecamp.com/email-submit)
+导航栏应该始终位于视口的顶部
+你的产品登陆页面至少要有一个媒体查询
+你的产品登陆页面应该至少使用一次 CSS flexbox
+完成需求并通过下面的所有测试来完成这个项目。 赋予它你自己的个人风格。 编程愉快！
+
+注意： 请在你的 HTML 中添加 <link rel="stylesheet" href="styles.css"> 以链接你的样式表并应用你的 CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div id="page-wallpaper">
+        <header id="header">
+            <div class="logo"><img src="https://img1.baidu.com/it/u=778675701,4180772781&fm=253&fmt=auto&app=138&f=JPG?w=667&h=500" alt="这是logo" id="header-img">
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#first">first</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#second">second</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#third">third</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container"></div>
+        <section id="hero">
+            <h2>登录区域</h2>
+            <form action="https://www.freecodecamp.com/email-submit" id="form"><input type="email" name="email" id="email" placeholder="Email"><input type="submit" id="submit" value="get started" class="btn"></form>
+        </section>
+        <div class="content">
+            <section id="first">
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>first</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere nihil, nulla, neque dolores delectus libero quia provident necessitatibus, vitae quidem repudiandae omnis debitis quae! Nam saepe eligendi fuga. Aut?</p>
+                    </div>
+                </div>
+            </section>
+            <section id="second">
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>second</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam veritatis magni fugiat cumque soluta. Doloribus veritatis explicabo repellendus ratione debitis suscipit unde quos adipisci sit. Quo adipisci omnis molestias sunt.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="third">
+                <div class="grid">
+                    <div class="icon"></div>
+                    <div class="desc">
+                        <h2>third</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio a quae quas. Libero totam, rem illo ab, dolorum fugit perspiciatis est voluptatum vel omnis corporis alias obcaecati, ad culpa sed.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="video"><iframe src="//player.bilibili.com/player.html?aid=975849547&bvid=BV1A44y1t77E&cid=419133862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" id="video"></iframe></section>
+            <section id="pricing">
+                <div class="product" id="1st">
+                    <div>这是产品名</div>
+                    <h2>这里是价位</h2>
+                    <ol>
+                        <li>参数1</li>
+                        <li>参数2</li>
+                        <li>参数3</li>
+                    </ol>
+                    <button class="btn">选择</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
